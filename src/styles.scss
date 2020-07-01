@@ -24,10 +24,6 @@ In other words:
 //Dark Theme
 // @import '@angular/material/prebuilt-themes/pink-bluegrey.css';
 
-*::-webkit-scrollbar {
-  display: none; //Hide all scrollbars
-}
-
 body {
   margin: 0;
   font-family: $font-family;

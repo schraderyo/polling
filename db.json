@@ -63,7 +63,7 @@
     },
     {
       "firstName": "test",
-      "lastName": "asdf",
+      "lastName": "Newname",
       "email": "asdf@asdf.com",
       "id": 11
     }
@@ -112,25 +112,35 @@
         {
           "id": 3,
           "question": "Elephants",
-          "answer": null
+          "answer": true
         },
         {
           "id": 4,
           "question": "Birds",
-          "answer": null
+          "answer": false
         },
         {
           "id": 5,
           "question": "Mice",
-          "answer": null
+          "answer": false
         },
         {
           "id": 6,
           "question": "Gators",
-          "answer": null
+          "answer": true
+        },
+        {
+          "id": 7,
+          "question": "Pangolin",
+          "answer": true
+        },
+        {
+          "id": 8,
+          "question": "Tiger",
+          "answer": false
         }
       ],
-      "responses": 0,
+      "responses": 1,
       "id": 2
     },
     {
@@ -256,6 +266,56 @@
         }
       ],
       "id": 4
+    },
+    {
+      "pollId": "2",
+      "status": "completed",
+      "userId": "3",
+      "timestamp": "Wed Jul 01 2020 15:50:43 GMT-0400",
+      "results": [
+        {
+          "id": 1,
+          "question": "Cats",
+          "answer": null
+        },
+        {
+          "id": 2,
+          "question": "Dogs",
+          "answer": null
+        },
+        {
+          "id": 3,
+          "question": "Elephants",
+          "answer": true
+        },
+        {
+          "id": 4,
+          "question": "Birds",
+          "answer": false
+        },
+        {
+          "id": 5,
+          "question": "Mice",
+          "answer": false
+        },
+        {
+          "id": 6,
+          "question": "Gators",
+          "answer": true
+        },
+        {
+          "id": 7,
+          "question": "Pangolin",
+          "answer": true
+        },
+        {
+          "id": 8,
+          "question": "Tiger",
+          "answer": false
+        }
+      ],
+      "title": "Which Animals Do You Like",
+      "id": 5
     }
   ]
 }

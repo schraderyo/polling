@@ -48,7 +48,7 @@ export class UsersComponent implements OnInit {
     const formControls = new FormGroup({
       firstName: new FormControl(user.firstName, Validators.required),
       lastName: new FormControl(user.lastName, Validators.required),
-      email: new FormControl(user.email, Validators.required),
+      email: new FormControl(user.email, [Validators.required, Validators.email]),
     });
 
     this.userForm = formControls;

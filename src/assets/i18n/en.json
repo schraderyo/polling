@@ -61,6 +61,8 @@
     "title": "Title",
     "true": "True",
     "false": "False",
+    "username_password_incorrect": "Username or Password is Incorrect",
+    "email_invalid": "Email Invalid",
     "responses": "Responses"
   },
   "LOGIN": {

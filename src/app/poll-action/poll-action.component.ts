@@ -34,8 +34,8 @@ export class PollActionComponent implements OnInit {
   ngOnInit() {
     this.generateRandomBackground();
     this.route.params.subscribe((event) => {
-      this.userId = event.data ? event.data.userId : 1;
-      this.pollId = event.data ? event.data.pollId : 1;
+      this.userId = event ? event.userId : 1;
+      this.pollId = event ? event.pollId : 1;
       this.initializeData();
     });
   }
@@ -62,7 +62,7 @@ export class PollActionComponent implements OnInit {
   }
 
   getFormData() {
-    return this.pollService.getPollById(this.userId);
+    return this.pollService.getPollById(this.pollId);
   }
 
   initializeStatsData() {

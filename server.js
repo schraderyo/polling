@@ -53,7 +53,7 @@ app.post('/api/login', (req, res) => {
             if (accountExists[0]) {
                 res.send({token: 'TOKEN'});
             } else {
-                return console.error('upload failed:', err);
+                res.send(null);
             }
         }
     });

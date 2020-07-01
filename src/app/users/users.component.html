@@ -18,6 +18,7 @@
         </mat-form-field>
         <mat-form-field>
           <input matInput placeholder="{{'COMMON.email' | translate}}" type="email" formControlName="email" maxlength="30" required>
+          <mat-error *ngIf="userForm.get('email').invalid">{{'COMMON.email_invalid' | translate}}</mat-error>
         </mat-form-field>
       </div>
   

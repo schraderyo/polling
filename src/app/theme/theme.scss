@@ -15,4 +15,6 @@ $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
     margin-bottom: 1rem;
 }
 
-// Material Angular Overrides
+.error-message {
+    color: $action-color;
+}
