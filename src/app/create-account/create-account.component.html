@@ -1,0 +1,25 @@
+<div class="account-page">
+  <div class="account-creation">
+    <div class="title info-text">
+      <button mat-icon-button routerLink="/login">
+        <i class="material-icons">arrow_back_ios</i>
+      </button>
+      <span>{{'ACCOUNT.create_account' | translate}}</span>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="{{'COMMON.firstName' | translate}}" type="text">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="{{'COMMON.lastName' | translate}}" type="text">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="{{'COMMON.email' | translate}}" type="email">
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button color="primary" (click)="createAccount()">{{'COMMON.submit' | translate}}</button>
+  </div>
+</div>

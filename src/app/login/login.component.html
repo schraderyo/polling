@@ -1,0 +1,23 @@
+<div class="login-page">
+  <div class="login">
+    <div class="title heading">
+      {{'COMMON.app_title' | translate}}
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="{{'LOGIN.username' | translate}}" [(ngModel)]="email">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="{{'LOGIN.password' | translate}}" [type]="hide ? 'password' : 'text'"
+          [(ngModel)]="password" (keyup.enter)="login()">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary" (click)="login()">{{'LOGIN.login' | translate}}</button>
+  </div>
+</div>

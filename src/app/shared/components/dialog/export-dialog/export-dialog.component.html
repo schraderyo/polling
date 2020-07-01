@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>{{'COMMON.export_poll' | translate}}</h1>
+<div mat-dialog-content>
+  <div *ngIf="showForm" class="export-form">
+    <mat-form-field>
+      <mat-label>{{'USERS.choose_user' | translate}}</mat-label>
+      <mat-select matNativeControl [(value)]="selectedUser" required>
+        <mat-option *ngFor="let user of users" [value]="user.id">{{user.firstName + ' ' + user.lastName}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-button (click)="getExportLink()">{{'COMMON.export' | translate}}</button>
+  </div>
+  <div *ngIf="showExportLink">
+    <div>
+      <label>
+        {{'POLLS.poll_link' | translate}}: 
+      </label>
+    </div>
+    <a class="export-link" (click)="navigateToUrl()">{{exportLink}}</a>
+    <button mat-button (click)="copyUrl()">{{'COMMON.copy_url' | translate}}</button>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>{{'COMMON.close' | translate}}</button>
+</div>

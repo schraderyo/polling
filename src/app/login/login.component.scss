@@ -1,0 +1,36 @@
+@import 'src/app/theme/theme.scss';
+
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url(/assets/images/nature-bg.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .title {
+    font-size: $font-size-title;
+  }
+
+  .login {
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    align-content: center;
+    max-width: 85%;
+    background: $default;
+    padding: $space-lg;
+    border-radius: 28px;
+    box-shadow: $box-shadow-md;
+
+    mat-form-field {
+      width: 80%;
+    }
+  }
+
+  button {
+    margin: $space-sm;
+  }
+}

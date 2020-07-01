@@ -1,0 +1,19 @@
+<div id="fab-dismiss"
+*ngIf="fabTogglerState==='active'" 
+     (click)="onToggleFab()">
+</div>
+<div class="fab-container">
+  <button mat-mini-fab class="fab-toggler" (click)="fabOptions ? onToggleFab() : null">
+    <mat-icon [@fabToggler]="{value: fabTogglerState}">add</mat-icon>
+  </button>
+  <div [@speedDialStagger]="optionArray.length">
+    <div *ngFor="let opt of optionArray" class="fab-secondary">
+      <button mat-mini-fab color="secondary" *ngIf="opt.icon" (click)="itemFunction(opt); fabOptions ? onToggleFab() : null">
+        <i class="material-icons">{{opt.icon}}</i>
+      </button>
+      <div *ngIf="opt.text" class="fab-text" (click)="itemFunction(opt); fabOptions ? onToggleFab() : null" translate>
+        {{opt.text}}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,94 @@
+<div class="users">
+  <div class="section">
+    <button mat-raised-button color="accent" (click)="createUser()">
+      {{'USERS.add_user' | translate}}
+    </button>
+  </div>
+
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm)" *ngIf="showForm">
+    <mat-card class="user-form">
+      <h3 *ngIf="!userId">{{'USERS.add_user' | translate}}</h3>
+      <h3 *ngIf="userId">{{'USERS.edit_user' | translate}}</h3>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="{{'COMMON.firstName' | translate}}" type="text" formControlName="firstName" maxlength="30" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="{{'COMMON.lastName' | translate}}" type="text" formControlName="lastName" maxlength="30" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="{{'COMMON.email' | translate}}" type="email" formControlName="email" maxlength="30" required>
+        </mat-form-field>
+      </div>
+  
+      <div>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!userForm.valid || !userForm.dirty">
+          <span *ngIf="!userId">{{'COMMON.add' | translate}}</span>          
+          <span *ngIf="userId">{{'COMMON.save' | translate}}</span>          
+        </button>
+        <button mat-button (click)="showForm = false">
+          {{'COMMON.cancel' | translate}}
+        </button>
+      </div>
+    </mat-card>
+  </form>
+
+  <h1>{{'USERS.polling_users' | translate}}</h1>
+
+  <mat-card class="section">
+    <strong>{{'USERS.total_users' | translate}}: </strong> 
+    {{totalUsers}}
+  </mat-card>
+
+  <div *ngIf="showTable">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> {{'COMMON.id' | translate}} </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="firstName">
+        <th mat-header-cell *matHeaderCellDef> {{'COMMON.firstName' | translate}} </th>
+        <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="lastName">
+        <th mat-header-cell *matHeaderCellDef> {{'COMMON.lastName' | translate}} </th>
+        <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> {{'COMMON.email' | translate}} </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef class="align-table-item-right"> {{'COMMON.actions' | translate}} </th>
+        <td mat-cell *matCellDef="let element" class="align-table-item-right">
+          <button mat-icon-button matTooltip="{{'USERS.stats' | translate}}" (click)="userStats(element)">
+            <span class="material-icons">
+              analytics
+            </span>
+          </button>
+          <button mat-icon-button matTooltip="{{'COMMON.edit' | translate}}" color="accent" (click)="editUser(element)">
+            <span class="material-icons">
+              edit
+            </span>
+          </button>
+          <button mat-icon-button matTooltip="{{'COMMON.delete' | translate}}" color="warn" (click)="deleteUser(element)">
+            <span class="material-icons">
+              clear
+            </span>
+          </button>
+        </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+
+  <div *ngIf="!showTable">
+    <h3>{{'COMMON.no_current_data' | translate}}</h3>
+  </div>
+</div>

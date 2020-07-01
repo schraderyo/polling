@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>{{data.firstName + ' ' + data.lastName}} {{'USERS.user_stats' | translate}}</h1>
+<div mat-dialog-content>
+  <div *ngIf="showData">
+    <p>{{'COMMON.responses' | translate}}: {{userData.length}}</p> 
+    <div *ngFor="let data of userData">
+
+      <div class="submission">
+        <label>{{data.title}}</label><br>
+        {{data.timestamp | date: 'medium'}}
+      </div>
+
+      <div class="questions" *ngFor="let answer of data.results; index as i">
+        <p>{{i+1}}: {{answer.question}}</p>
+        <label>{{'USERS.answer' | translate}}:</label> {{answer.answer}}
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!showData">
+    {{'POLLS.no_current_stats' | translate}}
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>{{'COMMON.close' | translate}}</button>
+</div>

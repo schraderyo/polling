@@ -1,0 +1,17 @@
+<div class="content-container">
+      <div class="top-bar">
+        <div>
+          <div class="title heading">
+            {{'COMMON.app_title' | translate}}
+          </div>
+        </div>
+
+        <div>
+          <a mat-button routerLink="/dashboard/polls">{{'TAB.polls' | translate}}</a>
+          <a mat-button routerLink="/dashboard/users">{{'TAB.users' | translate}}</a>
+          <a mat-button (click)="logout()">{{'SETTINGS.logout' | translate}}</a>
+        </div>
+      </div>
+
+      <ng-content [ngTemplateOutlet]="content"></ng-content>
+</div>

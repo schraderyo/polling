@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>{{data.title}} {{'POLLS.poll_stats' | translate}}</h1>
+<div mat-dialog-content>
+  <p>{{'COMMON.responses' | translate}}: {{data.responses}}</p>
+  <div *ngIf="showStats">
+    <div *ngFor="let question of breakdown; index as i" class="breakdown">
+      <h3>{{'POLLS.question_number' | translate}} {{i+1}}</h3>
+      <p>{{question}}</p>
+      <div class="results">
+        <span>
+          <label>{{'COMMON.true' | translate}}: </label>{{breakdownPos[i]}}%
+        </span>
+        <span>
+          <label>{{'COMMON.false' | translate}}: </label>{{breakdownNeg[i]}}%
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!showStats">
+    {{'POLLS.no_current_stats' | translate}}
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>{{'COMMON.close' | translate}}</button>
+</div>

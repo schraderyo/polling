@@ -1,0 +1,37 @@
+<h1>{{'POLLS.create_poll' | translate}}</h1>
+  
+  <form [formGroup]="pollForm" (ngSubmit)="onSubmit(pollForm)" *ngIf="showForm">
+    <mat-card class="poll-form">
+      <div class="title">
+        <mat-form-field>
+          <input matInput placeholder="{{'COMMON.title' | translate}}" type="text" formControlName="title" required>
+        </mat-form-field>
+      </div>
+
+      <div class="questions" *ngFor="let question of questions.controls; index as i; first as isFirst; last as isLast">
+        <mat-form-field>
+          <input matInput placeholder="{{'POLLS.poll_question' | translate}}" type="text"
+            [formControl]="questions.controls[i]">
+        </mat-form-field>
+        <button mat-icon-button matTooltip="{{'POLLS.add_another_question' | translate}}" *ngIf="isLast" (click)="addQuestion()">
+          <span class="material-icons">
+            add
+          </span>
+        </button>
+        <button mat-icon-button matTooltip="{{'POLLS.delete_question' | translate}}" *ngIf="!isFirst" (click)="deleteQuestion(i)">
+          <span class="material-icons">
+            clear
+          </span>
+        </button>
+      </div>
+
+      <div>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!pollForm.valid">
+          {{'POLLS.publish_poll' | translate}}
+        </button>
+        <button mat-button routerLink="/dashboard/polls">
+          {{'COMMON.cancel' | translate}}
+        </button>
+      </div>
+    </mat-card>
+  </form>

@@ -1,0 +1,18 @@
+@import 'sass/configuration/configuration';
+@import 'sass/typography';
+@import 'sass/fonts';
+@import 'sass/variables';
+@import '~@angular/material/theming';
+@include mat-core();
+
+$my-app-primary: mat-palette($theme-primary);
+$my-app-accent: mat-palette($theme-secondary);
+$my-app-warn: mat-palette($theme-tertiary);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
+
+.section {
+    margin-bottom: 1rem;
+}
+
+// Material Angular Overrides

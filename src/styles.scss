@@ -1,0 +1,86 @@
+/* 
+Style Guide:
+- Use REM as much as possible
+- Reference to variables for colors and such
+
+Order
+Box model: display: block; float: right; ...
+Positioning: position: absolute; top: 0; ...
+Visual (Borders & Background): 
+    - background-color: #f5f5f5; 
+    - border: 1px solid #e5e5e5; ...
+Typography: font-weight: 100; font-size: 13px; ...
+Misc: animations, transforms, etc.
+
+In other words:
+1. Flex 2. Position & Padding 3. Colors 4. Typography 5. Ect
+*/
+
+@import 'src/app/theme/theme.scss';
+
+//Light Theme
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+//Dark Theme
+// @import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+
+*::-webkit-scrollbar {
+  display: none; //Hide all scrollbars
+}
+
+body {
+  margin: 0;
+  font-family: $font-family;
+  background: $default;
+  height: $full-height;
+}
+
+#container {
+  height: $screen-height;
+}
+
+app-fab, app-fab {
+  position: fixed;
+  bottom: 3rem;
+  right: 0.5rem;
+  z-index: 10;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.pull-right {
+  float: right;
+}
+
+.spacer {
+  height: 1rem;
+}
+
+.general-heading {
+  padding-left: 0.25rem;
+  font-size: 1.25em;
+}
+
+.layer-dialog[style] {
+  .mat-dialog-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0 !important;
+    padding: 0;
+    overflow: hidden;
+
+    .mat-dialog-content {
+      height: 100vh;
+      max-height: 100vh !important;
+    }
+  }
+}

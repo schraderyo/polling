@@ -1,0 +1,56 @@
+@import './fonts';
+
+$font-family: $font-roboto;
+$font-title: $font-nanum;
+$font-heading: $font-fugaz;
+$font-heading-minor: $font-shrikhand;
+$font-heading-sub: $font-lobster;
+$font-subtitle: $font-kite;
+$font-info: $font-lexend;
+
+$screen-xxl: 1200px;
+$screen-xl: 1024px;
+$screen-lg: 900px;
+$screen-md: 768px;
+$screen-sm: 600px;
+$screen-xs: 480px;
+$screen-xxs: 435px;
+$screen-min: 320px;
+
+$space-sm: 0.25rem;
+$space-md: 0.5rem;
+$space-bg: 0.75rem;
+$space-lg: 1rem;
+
+$icon-height-small: 40px;
+$icon-height-medium: 60px;
+$icon-height-large: 80px;
+$icon-width-small: 30px;
+$icon-width-medium: 45px;
+$icon-width-large: 60px;
+
+$screen-height: 100vh;
+$full-height: 100%;
+
+$nav-top-height: 1.5rem;
+$nav-top-height-margin: 2.5rem;
+$nav-bottom-height: 3.5rem;
+$message-bar-height: 2rem;
+$margin-body: 0.25rem;
+
+$assets-root: '/assets';
+$images-root: '/img/';
+$fonts-root: '/fonts/';
+$font-thin: 100;
+$font-light: 300;
+$font-normal: 400;
+$font-bold: 500;
+$font-bolder: 700;
+$font-ultraBold: 900;
+
+$font-size-title: 1.5rem;
+$font-size-label: 1.75rem;
+$font-size-sub: 0.85rem;
+
+$box-shadow-md: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+$box-shadow-hv: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);

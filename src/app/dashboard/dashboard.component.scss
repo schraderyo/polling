@@ -1,0 +1,9 @@
+@import 'src/app/theme/theme.scss';
+
+.content {
+    box-sizing: border-box;
+    overflow: auto;
+    height: 100%;
+    background-color: $default;
+    padding: 1rem;
+}

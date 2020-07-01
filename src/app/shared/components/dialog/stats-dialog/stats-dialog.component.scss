@@ -1,0 +1,11 @@
+@import 'src/app/theme/theme.scss';
+
+.breakdown {
+    border-top: solid 1px $secondary;
+    margin-bottom: 1rem;
+}
+
+.results {
+    display: flex;
+    justify-content: space-around;
+}

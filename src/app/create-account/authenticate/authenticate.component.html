@@ -1,0 +1,40 @@
+<div class="authentication">
+  <div class="authenticate-user">
+    <div class="title info-text">
+      <button mat-icon-button routerLink="/account">
+        <i class="material-icons">arrow_back_ios</i>
+      </button>
+      <span>{{'ACCOUNT.authenticate_account' | translate}}</span>
+    </div>
+
+    <div>
+      <div class="step-info subtitle">{{'ACCOUNT.verification_step' | translate}}</div>
+      <div class="sub subtitle">{{'ACCOUNT.verification_verification' | translate}}</div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="{{'COMMON.email' | translate}}" type="email">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="{{'COMMON.phone' | translate}}" type="tel">
+        </mat-form-field>
+      </div>
+      <div>
+        <button mat-button (click)="sendVerification()">{{'ACCOUNT.send_verification' | translate}}</button>
+      </div>
+
+      <div *ngIf="verificationSent">
+        <div class="step-info subtitle">{{'ACCOUNT.verification' | translate}}</div>
+        <mat-form-field>
+          <input matInput placeholder="{{'ACCOUNT.code' | translate}}">
+        </mat-form-field>
+        <div>
+          <button mat-button (click)="sendVerification()">{{'ACCOUNT.send_again' | translate}}</button>
+          <button mat-button>{{'COMMON.submit' | translate}}</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

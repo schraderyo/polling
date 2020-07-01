@@ -1,0 +1,17 @@
+@import 'src/app/theme/theme.scss';
+
+.export-form {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        margin-left: 0.5rem;
+    }
+
+}
+
+.export-link {
+    color: $secondary;
+    text-decoration: underline;
+    cursor: pointer;
+}

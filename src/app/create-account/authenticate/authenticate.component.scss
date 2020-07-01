@@ -1,0 +1,47 @@
+@import 'src/app/theme/theme.scss';
+
+.authentication {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: url(/assets/images/logo/bg-5.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .authenticate-user {
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    align-content: center;
+    width: 85%;
+    background: $default;
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 1rem;
+    border-radius: 28px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+    mat-form-field {
+      width: 80%;
+    }
+
+    .title {
+      width: 100%;
+      margin-right: auto;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: solid 1px $dropdown-text;
+    }
+
+    .step-info {
+      color: $info-text;
+    }
+
+    .sub {
+      font-size: 0.85rem;
+      color: $subtitle-text;
+    }
+  }
+}

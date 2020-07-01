@@ -1,0 +1,36 @@
+@import 'src/app/theme/theme.scss';
+
+.poll-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.poll-form {
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    min-width: 40%;
+    max-width: 95%;
+
+    .questions {
+        border-top: solid 1px $secondary;
+        margin-bottom: 1rem;
+
+
+        mat-radio-button {
+            margin-right: 0.5rem;
+        }
+    }
+
+    .submission {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: 2rem;
+    }
+}

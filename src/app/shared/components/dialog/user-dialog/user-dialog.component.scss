@@ -1,0 +1,13 @@
+@import 'src/app/theme/theme.scss';
+
+.questions {
+    border-top: solid 1px $secondary;
+    margin-bottom: 1rem;
+}
+
+.submission {
+    text-align: center;
+    padding: 1rem;
+    background-color: $secondary;
+    color: $label-text;
+}

@@ -1,0 +1,26 @@
+@import './variables';
+
+.heading, h1 {
+    font-family: $font-heading;
+}
+
+.heading-minor, h2 {
+    font-family: $font-heading-minor;
+}
+
+.heading-sub, h3 {
+    font-family: $font-heading-sub;
+}
+
+.title-text {
+    font-family: $font-title;
+}
+
+.subtitle {
+    font-family: $font-subtitle;
+}
+
+.info-text, label {
+    font-family: $font-info;
+}
+

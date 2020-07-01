@@ -1,0 +1,261 @@
+{
+  "accounts": [
+    {
+      "id": 1,
+      "email": "admin@example.com",
+      "password": "password"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Jonathan",
+      "lastName": "Schrader",
+      "email": "jon@gmail.com"
+    },
+    {
+      "id": 2,
+      "firstName": "Larry",
+      "lastName": "Elder",
+      "email": "larry@gmail.com"
+    },
+    {
+      "id": 3,
+      "firstName": "Jeremy",
+      "lastName": "Johns",
+      "email": "jerms@gmail.com"
+    },
+    {
+      "id": 4,
+      "firstName": "Gregory",
+      "lastName": "Galt",
+      "email": "grog@gmail.com"
+    },
+    {
+      "id": 5,
+      "firstName": "Sarah",
+      "lastName": "McAllister",
+      "email": "sarah@gmail.com"
+    },
+    {
+      "id": 6,
+      "firstName": "Terrence",
+      "lastName": "Daniels",
+      "email": "depth@gmail.com"
+    },
+    {
+      "firstName": "James",
+      "lastName": "Busweiler",
+      "email": "hasEmail@email.com",
+      "id": 8
+    },
+    {
+      "firstName": "test",
+      "lastName": "user",
+      "email": "this@email.com",
+      "id": 9
+    },
+    {
+      "firstName": "test",
+      "lastName": "asdf",
+      "email": "asdf",
+      "id": 10
+    },
+    {
+      "firstName": "test",
+      "lastName": "asdf",
+      "email": "asdf@asdf.com",
+      "id": 11
+    }
+  ],
+  "polls": [
+    {
+      "title": "First Poll",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Did you finish College?",
+          "answer": null
+        },
+        {
+          "id": 2,
+          "question": "Did you get a Masters Degree?",
+          "answer": null
+        },
+        {
+          "id": 3,
+          "question": "Have you worked with Angular over 4 years",
+          "answer": null
+        },
+        {
+          "id": 4,
+          "question": "Have you worked with Sass over 4 years",
+          "answer": null
+        }
+      ],
+      "responses": 3,
+      "id": 1
+    },
+    {
+      "title": "Which Animals Do You Like",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Cats",
+          "answer": null
+        },
+        {
+          "id": 2,
+          "question": "Dogs",
+          "answer": null
+        },
+        {
+          "id": 3,
+          "question": "Elephants",
+          "answer": null
+        },
+        {
+          "id": 4,
+          "question": "Birds",
+          "answer": null
+        },
+        {
+          "id": 5,
+          "question": "Mice",
+          "answer": null
+        },
+        {
+          "id": 6,
+          "question": "Gators",
+          "answer": null
+        }
+      ],
+      "responses": 0,
+      "id": 2
+    },
+    {
+      "title": "Favorite Ice Cream",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Vanilla",
+          "answer": null
+        },
+        {
+          "id": 2,
+          "question": "Chocolate",
+          "answer": null
+        },
+        {
+          "id": 3,
+          "question": "Mint Chocolate Chip",
+          "answer": null
+        },
+        {
+          "id": 4,
+          "question": "Cookie Dough",
+          "answer": null
+        },
+        {
+          "id": 5,
+          "question": "Coffee",
+          "answer": null
+        }
+      ],
+      "responses": 0,
+      "id": 3
+    }
+  ],
+  "status": [
+    {
+      "pollId": 1,
+      "status": "completed",
+      "userId": 1,
+      "title": "New Poll",
+      "timestamp": "Tue Jun 30 2020 22:40:23 GMT-0400",
+      "results": [
+        {
+          "id": 1,
+          "question": "question 1 lets try this make it longish",
+          "answer": true
+        },
+        {
+          "id": 2,
+          "question": "Question 2 for the poll",
+          "answer": false
+        },
+        {
+          "id": 3,
+          "question": "thres;alsdjf ;akjsdf ",
+          "answer": true
+        },
+        {
+          "id": 4,
+          "question": "asd;fjlkahsdf hla dlkjas dlfkjhals djfhlajhsld fd",
+          "answer": true
+        }
+      ],
+      "id": 2
+    },
+    {
+      "pollId": 1,
+      "status": "completed",
+      "userId": 1,
+      "title": "New Poll",
+      "timestamp": "Tue Jun 30 2020 22:50:20 GMT-0400",
+      "results": [
+        {
+          "id": 1,
+          "question": "question 1 lets try this make it longish",
+          "answer": false
+        },
+        {
+          "id": 2,
+          "question": "Question 2 for the poll",
+          "answer": true
+        },
+        {
+          "id": 3,
+          "question": "thres;alsdjf ;akjsdf ",
+          "answer": true
+        },
+        {
+          "id": 4,
+          "question": "asd;fjlkahsdf hla dlkjas dlfkjhals djfhlajhsld fd",
+          "answer": true
+        }
+      ],
+      "id": 3
+    },
+    {
+      "pollId": 1,
+      "status": "completed",
+      "userId": 1,
+      "title": "New Poll",
+      "timestamp": "Tue Jun 30 2020 23:17:15 GMT-0400",
+      "results": [
+        {
+          "id": 1,
+          "question": "question 1 lets try this make it longish",
+          "answer": true
+        },
+        {
+          "id": 2,
+          "question": "Question 2 for the poll",
+          "answer": true
+        },
+        {
+          "id": 3,
+          "question": "thres;alsdjf ;akjsdf ",
+          "answer": true
+        },
+        {
+          "id": 4,
+          "question": "asd;fjlkahsdf hla dlkjas dlfkjhals djfhlajhsld fd",
+          "answer": true
+        }
+      ],
+      "id": 4
+    }
+  ]
+}

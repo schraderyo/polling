@@ -1,0 +1,28 @@
+<div *ngIf="showForm" class="poll-action" [ngStyle]="{'background': 'url(' + background + ')', 'background-repeat': 'no-repeat',
+'background-size': 'cover'}">
+  <mat-card class="poll-form">
+    <div class="title">
+      <h1>{{pollData.title}}</h1>
+    </div>
+
+    <div class="questions" *ngFor="let question of pollData.questions; index as i">
+      <h3>{{'POLLS.question_number' | translate}} {{i+1}}</h3>
+      <p>{{question.question}}</p>
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button (change)="updateStatus(i, true)" value="1">{{'COMMON.true' | translate}}</mat-radio-button>
+        <mat-radio-button (change)="updateStatus(i, false)" value="0">{{'COMMON.false' | translate}}</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div class="submission">
+      <button mat-raised-button color="primary" (click)="submitPoll()">
+        {{'POLLS.submit_poll' | translate}}
+      </button>
+
+      <span>
+        <label>{{'POLLS.status' | translate}}: </label>
+        {{pollStats.status}}
+      </span>
+    </div>
+  </mat-card>
+</div>
